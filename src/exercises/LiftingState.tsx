@@ -19,11 +19,9 @@ export default function LiftingState({ title }: BaseProps) {
         b) user has an id   -> Edit the user
         c) user does not have an id → Create the user
     */
-    console.log("DELETE: ", isDelete, "USER: ", user);
-
+    setUserToEdit(undefined);
     if (isDelete) {
       const newUsers = users.filter(u => u.id !== user.id);
-      console.log("newUsers: ", newUsers);
 
       setUsers(newUsers);
     } else {
